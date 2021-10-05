@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sm_Date_Expired__c</fullName>
+    <description>This value represents the default expiration date of the item.  It will be set by the flow when the item is created.</description>
+    <externalId>false</externalId>
+    <label>Date Expired</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

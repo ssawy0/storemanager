@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Milk</fullName>
+        <default>false</default>
+        <label>Milk</label>
+    </customValue>
+    <customValue>
+        <fullName>Cheese</fullName>
+        <default>false</default>
+        <label>Cheese</label>
+    </customValue>
+    <customValue>
+        <fullName>Coffee</fullName>
+        <default>false</default>
+        <label>Coffee</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Item Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

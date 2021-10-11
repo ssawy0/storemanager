@@ -4,6 +4,10 @@
 
 package.xml
 
+# Profiles
+**/Profiles/**
+**/Inventory_Item**
+
 # LWC configuration files
 **/jsconfig.json
 **/.eslintrc.json

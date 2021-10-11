@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sm_Store_Account__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>The Account that represents the Store this inventory is associated with..</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the Store this inventory is added for.</inlineHelpText>
+    <label>Store Account</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$User.Id</field>
+            <operation>equals</operation>
+            <valueField>$User.Id</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Inventory</relationshipLabel>
+    <relationshipName>Inventory</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

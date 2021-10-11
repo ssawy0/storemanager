@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sm_Net_Total__c</fullName>
+    <description>The net total for the order calculated from the Order Items minus the individual discounts.  An order level discount may be applied via a code an this total will reflect the Order Item Net - Order Discount Percent</description>
+    <externalId>false</externalId>
+    <label>Net Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

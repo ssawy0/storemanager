@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sm_Inventory_Item__c</fullName>
+    <externalId>false</externalId>
+    <label>Inventory Item</label>
+    <referenceTo>sm_Inventory_Item__c</referenceTo>
+    <relationshipLabel>Store Order Items</relationshipLabel>
+    <relationshipName>Store_Order_Items</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

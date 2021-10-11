@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>sm_Quantity_ATP__c</fullName>
+    <fullName>sm_Item_Description__c</fullName>
     <externalId>false</externalId>
-    <formula>sm_Quantity_Onhand__c -  sm_Quantity_Reserved__c</formula>
-    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Quantity ATP</label>
-    <precision>18</precision>
+    <label>Item Description</label>
+    <length>255</length>
     <required>false</required>
-    <scale>2</scale>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>Number</type>
+    <type>Text</type>
     <unique>false</unique>
 </CustomField>

@@ -156,7 +156,7 @@
     <label>Store Order</label>
     <nameField>
         <displayFormat>SO-{YYYY}-{MM}-{00000}</displayFormat>
-        <label>Store Order Name</label>
+        <label>Order Number</label>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <formulas>
+        <name>v_calculatedExpirationDate</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.sm_Inventory_Item__r.sm_Expiration_Period__c} +  {!$Flow.CurrentDate}</expression>
+    </formulas>
+    <interviewLabel>Inventory - New Inventory Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Inventory - New Inventory Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_New_Inventory_Record</name>
+        <label>Update New Inventory Record</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <inputAssignments>
+            <field>sm_Date_Expired__c</field>
+            <value>
+                <elementReference>v_calculatedExpirationDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>sm_Date_Received__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_New_Inventory_Record</targetReference>
+        </connector>
+        <object>sm_Inventory__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

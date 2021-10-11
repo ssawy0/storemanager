@@ -156,8 +156,9 @@
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <label>Inventory</label>
     <nameField>
+        <displayFormat>INV-{00000}</displayFormat>
         <label>Inventory Name</label>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Inventory</pluralLabel>
     <searchLayouts/>

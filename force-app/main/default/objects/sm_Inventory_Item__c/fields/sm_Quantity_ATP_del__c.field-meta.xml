@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>sm_Expiration_Period__c</fullName>
-    <defaultValue>0</defaultValue>
-    <description>The number of days before the item expires.</description>
+    <fullName>sm_Quantity_ATP_del__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>Enter the number of days on average the Item lasts for.</inlineHelpText>
-    <label>Expiration Period</label>
+    <formula>sm_Quantity_Onhand__c -  sm_Quantity_Reserved_del__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Quantity ATP</label>
     <precision>18</precision>
     <required>false</required>
-    <scale>0</scale>
+    <scale>2</scale>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Number</type>

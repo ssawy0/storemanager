@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <decisions>
+        <name>Is_Milk_Product</name>
+        <label>Is Milk Product</label>
+        <locationX>182</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IS_Milk</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.sm_Item_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Milk</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_New_Inventory_Item</targetReference>
+            </connector>
+            <label>Is Milk</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <name>v_newName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Name} &amp; &apos; &apos; &amp; TEXT({!$Record.sm_Item_Type__c}) &amp; &apos; - &apos; &amp; TEXT({!$Record.sm_Item_Unit__c})</expression>
+    </formulas>
+    <interviewLabel>New Inventory Item Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>New Inventory Item Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_New_Inventory_Item</name>
+        <label>Update New Inventory Item</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>v_newName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>sm_Expiration_Period__c</field>
+            <value>
+                <numberValue>10.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_Milk_Product</targetReference>
+        </connector>
+        <object>sm_Inventory_Item__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

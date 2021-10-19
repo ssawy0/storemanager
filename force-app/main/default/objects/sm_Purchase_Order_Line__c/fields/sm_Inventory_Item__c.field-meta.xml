@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sm_Inventory_Item__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Inventory Item</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>sm_Inventory_Item__c.sm_Is_Inventoriable__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>sm_Inventory_Item__c</referenceTo>
+    <relationshipName>Purchase_Orders</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

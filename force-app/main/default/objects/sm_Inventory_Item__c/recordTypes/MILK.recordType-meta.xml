@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MILK</fullName>
+    <active>false</active>
+    <label>MILK</label>
+    <picklistValues>
+        <picklist>sm_Item_Type__c</picklist>
+        <values>
+            <fullName>Milk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>sm_Item_Unit__c</picklist>
+        <values>
+            <fullName>Each</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glass</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Half Gallon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Half Pound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quart</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

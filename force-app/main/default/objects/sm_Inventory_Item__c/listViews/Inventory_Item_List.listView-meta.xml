@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inventory_Item_List</fullName>
+    <columns>NAME</columns>
+    <columns>sm_Item_Type__c</columns>
+    <columns>sm_Item_Unit__c</columns>
+    <columns>sm_Quantity_ATP_del__c</columns>
+    <columns>sm_Cost__c</columns>
+    <columns>sm_Price__c</columns>
+    <columns>sm_Vendor__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>Inventory Item List</label>
+</ListView>
